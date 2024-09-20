@@ -279,6 +279,13 @@ let objTable = table
 
 // console.log(objTable[0]);
 
+let data = [];
+
 for (let i=1; i<objTable.length; i++) {
-  console.log(objTable[i]);
+  data[i-1] = { "id": `${objTable[i][0]}`, "name": `${objTable[i][1]}`, "occupation": `${objTable[i][2]}`, "age": `${objTable[i][3]}`, "iscool": `${objTable[i][4]}` };   
 }
+
+console.log(data);
+
+
+
