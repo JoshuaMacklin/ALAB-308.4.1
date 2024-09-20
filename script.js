@@ -275,17 +275,43 @@ console.log(table);
 
 // Part 3: Transforming Data
 
-let objTable = table
+let objTable = [];
 
-// console.log(objTable[0]);
-
-let data = [];
-
-for (let i=1; i<objTable.length; i++) {
-  data[i-1] = { "id": `${objTable[i][0]}`, "name": `${objTable[i][1]}`, "occupation": `${objTable[i][2]}`, "age": `${objTable[i][3]}`, "iscool": `${objTable[i][4]}` };   
+for (let i=1; i<table.length; i++) {
+  objTable[i-1] = { "id": `${table[i][0]}`, "name": `${table[i][1]}`, "occupation": `${table[i][2]}`, "age": `${table[i][3]}`};   
 }
 
-console.log(data);
+// console.log(objTable);
 
+// Part 4: Sorting and Manipulating Data
 
+objTable.sort().pop();
+objTable.splice(1,0,{id: "48", name: "Barry", occupation: "Runner", age: "25"})
+objTable.push({id: "7", name: "Bilbo", occupation: "None", age: "111" })
+console.log(objTable);
 
+let ageSum = 0
+
+for (i = 0; i < objTable.length; i++){
+  ageSum += Number(objTable[i].age);
+}
+
+let ageAvg = ageSum / objTable.length
+
+console.log(ageAvg);
+
+// Part 5: Full Circle
+
+let fcCsvString = 'ID, Name, Occupation, Age\n'
+
+for (let i=0; i<objTable.length; i++){
+  userInfo = `${objTable[i].id}, ${objTable[i].name}, ${objTable[i].occupation}, ${objTable[i].age}`
+  if (i !== objTable.length-1) {
+    fcCsvString += `${userInfo}\n`
+  } else {
+    fcCsvString += `${userInfo}`
+  }
+  
+}
+
+console.log(fcCsvString);
