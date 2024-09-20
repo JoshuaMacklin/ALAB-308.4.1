@@ -1,4 +1,4 @@
-// Part 1: Feeling Loopy  Refactor============================================================
+// Part 1: Feeling Loopy  Refactor ============================================================
 
 // As a final task, solve the following practical problem regarding string processing.
 // Context: A CSV file, or “Comma-Separated Values” file is traditionally used to store tabular data. You may be familiar with CSVs through past use of programs such as Microsoft Excel or Google Sheets. While each of these programs save their data in different formats to preserve style (e.g., font color or cell backgrounds), at their core, they are storing CSV data.
@@ -137,6 +137,10 @@
 //   }
 // }
 
+
+
+
+
 // Part 2: Expanding Functions
 
 // Array Version Refactor
@@ -273,6 +277,10 @@ console.log(table);
 //   console.log("hi");
 // }
 
+
+
+
+
 // Part 3: Transforming Data
 
 let objTable = [];
@@ -281,7 +289,10 @@ for (let i=1; i<table.length; i++) {
   objTable[i-1] = { "id": `${table[i][0]}`, "name": `${table[i][1]}`, "occupation": `${table[i][2]}`, "age": `${table[i][3]}`};   
 }
 
-// console.log(objTable);
+console.log(objTable);
+
+
+
 
 // Part 4: Sorting and Manipulating Data
 
@@ -299,6 +310,10 @@ for (i = 0; i < objTable.length; i++){
 let ageAvg = ageSum / objTable.length
 
 console.log(ageAvg);
+
+
+
+
 
 // Part 5: Full Circle
 
